@@ -1,0 +1,4 @@
+.*
+buck-out/
+*.pyc
+out/
