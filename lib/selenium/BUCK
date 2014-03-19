@@ -1,0 +1,7 @@
+include_defs('//bucklets/maven_jar.bucklet')
+
+maven_jar(
+  name = 'selenium-java',
+  id = 'org.seleniumhq.selenium:selenium-java:2.40.0',
+  sha1 = '512af6995dc21cb005b8b936a1d2da2090bcd2c8',
+)
