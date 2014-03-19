@@ -2,7 +2,7 @@
 
 java_test(
   name = 'appium',
-  srcs = glob(['src/test/java/**/*.java']),
+  srcs = glob(['test/**/*.java']),
   deps = [
     '//lib/junit:junit',
     '//lib/sauce:sauce_junit',
@@ -12,7 +12,6 @@ java_test(
 )
 
 project_config(
-  src_target = ':appium',
-  src_roots = [ 'src' ],
   test_target = ':appium',
+  test_roots = [ 'test' ]
 )

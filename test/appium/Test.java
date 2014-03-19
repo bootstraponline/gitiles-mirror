@@ -1,4 +1,4 @@
-package test.java.appium;
+package appium;
 
 import static org.junit.Assert.*;
 
