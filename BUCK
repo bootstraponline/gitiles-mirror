@@ -10,3 +10,9 @@ java_test(
   ],
   visibility = ['PUBLIC'],
 )
+
+project_config(
+  src_target = ':appium',
+  src_roots = [ 'src' ],
+  test_target = ':appium',
+)

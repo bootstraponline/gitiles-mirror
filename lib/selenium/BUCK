@@ -1,7 +1,25 @@
 include_defs('//bucklets/maven_jar.bucklet')
 
+SELENIUM_VERSION = '2.40.0'
+
 maven_jar(
   name = 'selenium-java',
-  id = 'org.seleniumhq.selenium:selenium-java:2.40.0',
+  id = 'org.seleniumhq.selenium:selenium-java:' + SELENIUM_VERSION,
   sha1 = '512af6995dc21cb005b8b936a1d2da2090bcd2c8',
+)
+
+maven_jar(
+  name = 'selenium-support',
+  id = 'org.seleniumhq.selenium:selenium-support:' + SELENIUM_VERSION,
+  sha1 = 'bdf917996cbb9e22f761a55265f4b35aa78501b4',
+  deps = ['//lib/selenium:selenium-api', '//lib:hamcrest-all', '//lib/junit:junit'],
+  visibility = ['//lib/selenium:selenium-java'],
+)
+
+maven_jar(
+  name = 'selenium-api',
+  id = 'org.seleniumhq.selenium:selenium-api:' + SELENIUM_VERSION,
+  sha1 = 'f0f9033ee6520179886a99ebb7b30f48d87c109c',
+  deps = ['//lib:json', '//lib:guava'],
+  visibility = ['//lib/selenium:selenium-support'],
 )
